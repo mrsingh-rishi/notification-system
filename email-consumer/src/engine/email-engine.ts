@@ -1,4 +1,4 @@
-import Brevo from "@getbrevo/brevo";
+import * as Brevo from "@getbrevo/brevo";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -47,14 +47,14 @@ class EmailEngine {
       name: process.env.SENDER_NAME || "Default Sender",
     };
     sendSmtpEmail.headers = { "Some-Custom-Name": "unique-id-1234" };
-    sendSmtpEmail.params = {};
+    sendSmtpEmail.params = {
+      parameter: "My param value",
+      subject: "common subject",
+    };
 
     try {
       const data = await this.apiInstance.sendTransacEmail(sendSmtpEmail);
-      console.log(
-        "API called successfully. Returned data:",
-        JSON.stringify(data)
-      );
+      console.log("API called successfully. Returned data:");
     } catch (error) {
       console.error("Error sending email:", error);
     }

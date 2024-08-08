@@ -10,7 +10,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-
 const port = process.env.PORT || 3000;
 const kafka = new Kafka({
   clientId: "my-app",
@@ -33,7 +32,7 @@ app.post("/", async (req: Request, res: Response) => {
       ],
     });
 
-    res.status(201).send("Notification sent successfully");
+    res.status(201).json({ message: "Notification sent successfully" });
   } catch (error: any) {
     res
       .status(500)

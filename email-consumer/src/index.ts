@@ -1,9 +1,12 @@
 import { Kafka } from "kafkajs";
 
+
 const kafka = new Kafka({
   clientId: "my-app",
   brokers: ["localhost:9092"],
 });
+
+
 
 const consumer = kafka.consumer({ groupId: "test-group" });
 
@@ -16,7 +19,7 @@ const run = async () => {
       console.log({
         partition,
         offset: message.offset,
-        value: message.value.toString(),
+        value: message.value?.toString(),
       });
     },
   });

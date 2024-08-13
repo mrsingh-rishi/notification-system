@@ -46,18 +46,24 @@ A scalable notification system built with Node.js and Express, utilizing Kafka f
 2. **Install dependencies:**
 
     ```bash
+    cd api
     npm install
+    cd ..
+    cd email-consumer
+    npm install
+    cd ..
+    cd whatsapp-consumer
+    npm install
+    cd ..
+    cd sms-consumer
+    npm install
+    cd ..
     ```
 
 3. **Configuration:**
 
-    Create a `.env` file in the root directory and add your configuration settings:
+    rename .env.example file from email-consumer, sms-consumer and whatsapp-consumer:
 
-    ```env
-    KAFKA_BROKER=your_kafka_broker
-    BREVO_API_KEY=your_brevo_api_key
-    TAILLIWO_API_KEY=your_tailliwo_api_key
-    ```
 
 4. **Start Kafka:**
 
@@ -74,9 +80,9 @@ A scalable notification system built with Node.js and Express, utilizing Kafka f
     Start each consumer to process notifications from Kafka:
 
     ```bash
-    npm run start:email-consumer
-    npm run start:sms-consumer
-    npm run start:whatsapp-consumer
+    cd email-consumer && npm run start
+    cd sms-consumer && npm run start
+    cd whatsapp-consumer && npm run start
     ```
 
 ## API Endpoint

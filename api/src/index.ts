@@ -18,7 +18,7 @@ const kafka = new Kafka({
 
 const producer = kafka.producer();
 
-app.post("/", async (req: Request, res: Response) => {
+app.post("/api/notification", async (req: Request, res: Response) => {
   try {
     const { service, to, message } = req.body;
     await producer.connect();

@@ -1,4 +1,5 @@
 import { Kafka } from "kafkajs";
+import WhatsAppEngine from "./engine/whatsapp-engine";
 
 const kafka = new Kafka({
   clientId: "my-app",
@@ -21,6 +22,13 @@ const run = async () => {
       const parsedData = JSON.parse(message.value?.toString() || "{}");
       const { to, message: msg } = parsedData;
       try {
+        WhatsAppEngine.getInstance()
+          .sendWhatsAppMessage({
+            body: msg,
+            to: to,
+          })
+          .then(() => console.log("SENT"))
+          .catch(() => console.log("ERROR"));
       } catch (error) {
         console.log(error);
       }

@@ -10,6 +10,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "kafkajs": "^2.2.4"
+    "dotenv": "^16.4.5",
+    "kafkajs": "^2.2.4",
+    "twilio": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.2.0"
   }
 }

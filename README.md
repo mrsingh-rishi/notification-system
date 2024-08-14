@@ -109,7 +109,6 @@ A scalable notification system built with Node.js and Express, utilizing Kafka f
 - **Request Body:**
     ```json
     {
-      
       "userId": 1,
       "message": "Your notification message here"
     }

@@ -74,8 +74,20 @@ A scalable notification system built with Node.js and Express, utilizing Kafka f
     ```bash
     npm start
     ```
+6. **Run the Prisma Migrate and Generate Commands:**
 
-6. **Run Consumers:**
+    ```bash
+    npm run prisma:migrate
+    npm run prisma:generate
+    ```
+
+7. **Seed the DB**
+
+    ```bash
+    npm run seed
+    ```
+
+8. **Run Consumers:**
 
     Start each consumer to process notifications from Kafka:
 
@@ -95,32 +107,8 @@ A scalable notification system built with Node.js and Express, utilizing Kafka f
 - **Request Body:**
     ```json
     {
-      "service": "email" | "sms" | "whatsapp",
-      "to": "recipient@example.com" | "+1234567890",
+      
+      "userId": 1,
       "message": "Your notification message here"
-    }
-    ```
-- **Example Request for Email:**
-    ```json
-    {
-      "service": "email",
-      "to": "recipient@example.com",
-      "message": "This is a test email message"
-    }
-    ```
-- **Example Request for SMS:**
-    ```json
-    {
-      "service": "sms",
-      "to": "+1234567890",
-      "message": "This is a test SMS message"
-    }
-    ```
-- **Example Request for WhatsApp:**
-    ```json
-    {
-      "service": "whatsapp",
-      "to": "+1234567890",
-      "message": "This is a test WhatsApp message"
     }
     ```

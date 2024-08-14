@@ -69,17 +69,19 @@ A scalable notification system built with Node.js and Express, utilizing Kafka f
 
     Ensure Kafka is running on your local machine or use a Kafka cluster. For local development, follow the [Kafka Quickstart](https://kafka.apache.org/quickstart).
 
-5. **Run the Backend API:**
-
-    ```bash
-    npm start
-    ```
-6. **Run the Prisma Migrate and Generate Commands:**
+5. **Run the Prisma Migrate and Generate Commands:**
 
     ```bash
     npm run prisma:migrate
     npm run prisma:generate
     ```
+
+6. **Run the Backend API:**
+
+    ```bash
+    npm start
+    ```
+
 
 7. **Seed the DB**
 

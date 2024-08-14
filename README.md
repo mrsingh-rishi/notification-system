@@ -2,6 +2,14 @@
 
 A scalable notification system built with Node.js and Express, utilizing Kafka for message handling and microservices architecture. The backend API pushes notification data to Kafka, which is then processed by dedicated consumers for email, SMS, and WhatsApp notifications.
 
+## Images
+
+### Architecture Diagram
+
+<img src="https://github.com/user-attachments/assets/6944f702-6b73-4032-8031-e766980742ad" alt="Architecture Diagram" width="600"/>
+
+*Figure 1: Overview of the notification system architecture.*
+
 ## Features
 
 - **Microservices Architecture**: Ensures modularity and scalability.
@@ -62,8 +70,7 @@ A scalable notification system built with Node.js and Express, utilizing Kafka f
 
 3. **Configuration:**
 
-    rename .env.example file from email-consumer, sms-consumer and whatsapp-consumer:
-
+    Rename the `.env.example` file in `email-consumer`, `sms-consumer`, and `whatsapp-consumer` to `.env` and update the necessary environment variables.
 
 4. **Start Kafka:**
 
@@ -81,7 +88,6 @@ A scalable notification system built with Node.js and Express, utilizing Kafka f
     ```bash
     npm start
     ```
-
 
 7. **Seed the DB**
 

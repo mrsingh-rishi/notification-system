@@ -47,7 +47,7 @@ A scalable notification system built with Node.js and Express, utilizing Kafka f
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your-username/notification-system.git
+    git clone https://github.com/mrsingh-rishi/notification-system.git
     cd notification-system
     ```
 

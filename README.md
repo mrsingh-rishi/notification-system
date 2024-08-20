@@ -6,7 +6,7 @@ A scalable notification system built with Node.js and Express, utilizing Kafka f
 
 ### Architecture Diagram
 
-<img src="https://github.com/user-attachments/assets/6944f702-6b73-4032-8031-e766980742ad" alt="Architecture Diagram" width="600"/>
+<img src="https://github.com/user-attachments/assets/6944f702-6b73-4032-8031-e766980742ad" alt="Architecture Diagram" width="800"/>
 
 *Figure 1: Overview of the notification system architecture.*
 

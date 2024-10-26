@@ -5,8 +5,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc && node dist/index.js",
+    "prisma:docker": "npm run prisma:migrate && npm run prisma:generate && npm run seed && npm run studio",
+    "dev:docker": "npm run prisma:docker & npm start",
     "prisma:generate": "npx prisma generate --schema=src/prisma/schema.prisma",
-    "prisma:migrate": "npx prisma migrate dev --schema=src/prisma/schema.prisma",
+    "prisma:migrate": "npx prisma migrate deploy --schema=src/prisma/schema.prisma",
     "prisma:studio": "npx prisma studio --schema=src/prisma/schema.prisma",
     "seed": "tsc && node dist/seed.js"
   },

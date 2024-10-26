@@ -44,6 +44,8 @@ A scalable notification system built with Node.js and Express, utilizing Kafka f
 
 ### Installation
 
+**Method 1: Manual Installation**
+
 1. **Clone the repository:**
 
     ```bash
@@ -104,6 +106,22 @@ A scalable notification system built with Node.js and Express, utilizing Kafka f
     cd sms-consumer && npm run start
     cd whatsapp-consumer && npm run start
     ```
+
+**Method 2: Docker Installation**
+
+1. **Build Docker Images:**
+
+    ```bash
+    docker-compose build
+    ```
+
+2. **Start the Application:**
+
+    ```bash
+    docker-compose up
+    ```
+
+    This will start the backend API, email consumer, SMS consumer, WhatsApp consumer, and Kafka services. Ensure you have Docker installed on your system.
 
 ## API Endpoint
 

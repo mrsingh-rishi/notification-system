@@ -87,4 +87,6 @@ app.post("/api/notification", async (req: Request, res: Response) => {
   }
 });
 
-app.listen(port);
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
